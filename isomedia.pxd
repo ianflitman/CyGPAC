@@ -184,7 +184,7 @@ cdef extern from "/home/ian/projects/tools/gpac/include/gpac/internal/isomedia_d
 cdef extern from "/home/ian/projects/tools/gpac/include/gpac/isomedia.h":
     ctypedef struct GF_ISOFile:
         GF_Err LastError,
-        char *filename,
+        char *fileName,
         GF_DataMap *movieFileMap
         char *finalName
         # the file where we store edited samples (for READ_WRITE and WRITE mode only)
