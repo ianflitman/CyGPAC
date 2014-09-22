@@ -1,4 +1,5 @@
 cdef extern from "/home/ian/projects/tools/gpac/include/gpac/tools.h":
+
     ctypedef enum GF_Err:
         #Message from any scripting engine used in the presentation (ECMAScript, MPEG-J, ...) (Info).*/
         GF_SCRIPT_INFO = 3,
@@ -75,4 +76,7 @@ cdef extern from "/home/ian/projects/tools/gpac/include/gpac/tools.h":
         GF_AUTHENTICATION_FAILURE = -50,
         #Script not ready for playback
         GF_SCRIPT_NOT_READY	= -51
+
+
+
 

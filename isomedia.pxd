@@ -180,6 +180,8 @@ cdef extern from "/home/ian/projects/tools/gpac/include/gpac/internal/isomedia_d
         u32 nb_refs,
         GF_SIDXReference *refs
 
+    GF_ISOFile *gf_isom_create_movie(const char *fileName, u32 OpenMode, const char *tmp_dir)
+
 
 cdef extern from "/home/ian/projects/tools/gpac/include/gpac/isomedia.h":
     ctypedef struct GF_ISOFile:
@@ -224,6 +226,11 @@ cdef extern from "/home/ian/projects/tools/gpac/include/gpac/isomedia.h":
     GF_Err gf_isom_close(GF_ISOFile *the_file)
     const char *gf_isom_get_filename(GF_ISOFile *the_file)
     u64 gf_isom_get_duration(GF_ISOFile *the_file)
+    u32 gf_isom_get_track_count(GF_ISOFile *the_file)
     u64 gf_isom_get_file_size(GF_ISOFile *the_file)
+    u32 gf_isom_get_timescale(GF_ISOFile *the_file)
+    void gf_isom_delete(GF_ISOFile *the_file)
+    #GF_ISOFile *gf_isom_create_movie(const char *filename, u32 openmode, const char *tmp_dir)
+
     #check if the file has a top styp box and returns the brand and version of the first styp found
     bint gf_isom_has_segment(GF_ISOFile *isofile, u32 *brand, u32 *version)

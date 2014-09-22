@@ -1,3 +1,4 @@
+
 from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Build import cythonize
@@ -8,7 +9,7 @@ extensions = [
               include_dirs = ['/home/ian/projects/tools/gpac/include'],
               libraries = ['gpac'],
               library_dirs = ['/home/ian/projects/tools/gpac/bin/gcc']
-    )
+              )
 ]
 
 setup(
