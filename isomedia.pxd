@@ -180,7 +180,170 @@ cdef extern from "/home/ian/projects/tools/gpac/include/gpac/internal/isomedia_d
         u32 nb_refs,
         GF_SIDXReference *refs
 
+    ctypedef struct GF_SttsEntry:
+        u32 sampleCount,
+        u32 sampleDelta
+
+    ctypedef struct GF_TimeToSampleBox:
+        GF_ISOM_FULL_BOX fbox,
+        GF_SttsEntry *entries,
+        u32 nb_entries,
+        u32 alloc_size,
+        #cache for WRITE
+        u32 w_currentSampleNum,
+        u64 w_LastDTS,
+        #cache for READ
+        u32 r_FirstSampleInEntry,
+        u32 r_currentEntryIndex,
+        u64 r_CurrentDTS
+
+    ctypedef struct GF_StscEntry:
+        u32 firstChunk,
+        u32 nextChunk,
+        u32 samplesPerChunk,
+        u32 sampleDescriptionIndex,
+        u8 isEdited
+
+    ctypedef struct GF_StsfEntry:
+        u32 SampleNumber,
+        u32 fragmentCount,
+        u16 *fragmentSizes
+
+    ctypedef struct GF_SampleFragmentBox:
+        GF_ISOM_FULL_BOX fbox,
+        GF_List *entryList,
+        #cache for write
+        GF_StsfEntry *w_currentEntry,
+        u32 w_currentEntryIndex,
+        #cache for read
+        u32 r_currentEntryIndex,
+        GF_StsfEntry *r_currentEntry
+
+    ctypedef struct GF_TrackReferenceBox:
+        GF_ISOM_BOX box,
+        GF_List *boxList
+
+    ctypedef struct GF_MediaHeaderBox:
+        GF_ISOM_FULL_BOX fbox,
+        u64 creationTime,
+        u64 modificationTime,
+        u32 timeScale,
+        u64 duration,
+        char packedLanguage[4],
+        u16 reserved
+
+    ctypedef struct GF_SampleTableBox:
+        pass
+
+# typedef struct
+# {
+# GF_ISOM_BOX
+# GF_TimeToSampleBox *TimeToSample;
+# GF_CompositionOffsetBox *CompositionOffset;
+# GF_CompositionToDecodeBox *CompositionToDecode;
+# GF_SyncSampleBox *SyncSample;
+# GF_SampleDescriptionBox *SampleDescription;
+# GF_SampleSizeBox *SampleSize;
+# GF_SampleToChunkBox *SampleToChunk;
+# /*untyped, to handle 32 bits and 64 bits chunkOffsets*/
+#                                          GF_Box *ChunkOffset;
+# GF_ShadowSyncBox *ShadowSync;
+# GF_DegradationPriorityBox *DegradationPriority;
+# GF_PaddingBitsBox *PaddingBits;
+# GF_SampleDependencyTypeBox *SampleDep;
+# GF_SampleFragmentBox *Fragments;
+#
+# GF_SubSampleInformationBox *SubSamples;
+#
+# GF_List *sampleGroups;
+# GF_List *sampleGroupsDescription;
+#
+# GF_List *sai_sizes;
+# GF_List *sai_offsets;
+#
+# u32 MaxSamplePerChunk;
+# u16 groupID;
+# u16 trackPriority;
+# u32 currentEntryIndex;
+# } GF_SampleTableBox;
+
+    ctypedef struct GF_MediaInformationBox:
+        GF_ISOM_BOX box,
+        GF_DataInformationBox *dataInformation,
+        GF_SampleTableBox *sampleTable
+        pass
+
+#     typedef struct __tag_media_info_box
+# {
+# GF_ISOM_BOX
+# GF_DataInformationBox *dataInformation;
+# GF_SampleTableBox *sampleTable;
+# GF_Box *InfoHeader;
+# struct __tag_data_map *dataHandler;
+# u32 dataEntryIndex;
+# } GF_MediaInformationBox;
+
+    ctypedef struct GF_MediaBox:
+        GF_ISOM_BOX box,
+        GF_TrackBox *media
+        GF_MediaHeaderBox *mediaHeader
+        GF_HandlerBox *handler,
+        GF_MediaInformationBox *information
+        pass
+
+#
+#     typedef struct __tag_media_box
+# {
+# GF_ISOM_BOX
+# GF_TrackBox *mediaTrack;
+# GF_MediaHeaderBox *mediaHeader;
+# GF_HandlerBox *handler;
+# struct __tag_media_info_box *information;
+# u64 BytesMissing;
+# } GF_MediaBox;
+
+    ctypedef struct GF_TrackBox:
+        GF_ISOM_BOX box,
+        GF_UserDataBox *udata,
+        GF_TrackReferenceBox *References
+        GF_MediaBox *Media
+        pass
+
+
+
+# typedef struct
+# {
+# GF_ISOM_BOX
+# GF_UserDataBox *udta;
+# GF_TrackHeaderBox *Header;
+# struct __tag_media_box *Media;
+# GF_EditBox *editBox;
+# GF_TrackReferenceBox *References;
+# /*meta box if any*/
+#               struct __tag_meta_box *meta;
+# /*other*/
+#   GF_List *boxes;
+#
+# GF_MovieBox *moov;
+# /*private for media padding*/
+#                     u32 padding_bytes;
+# /*private for editing*/
+#         char *name;
+# /*private for editing*/
+#         Bool is_unpacked;
+#
+# #ifndef	GPAC_DISABLE_ISOM_FRAGMENTS
+# u64 dts_at_seg_start;
+# u32 sample_count_at_seg_start;
+# #endif
+#} GF_TrackBox;
+
     GF_ISOFile *gf_isom_create_movie(const char *fileName, u32 OpenMode, const char *tmp_dir)
+    GF_Box *ftyp_New()
+    void ftyp_del(GF_Box *s)
+    GF_Err ftyp_Read(GF_Box *s,GF_BitStream *bs)
+    GF_Err ftyp_Write(GF_Box *s, GF_BitStream *bs)
+    GF_Err ftyp_Size(GF_Box *s)
 
 
 cdef extern from "/home/ian/projects/tools/gpac/include/gpac/isomedia.h":
@@ -193,8 +356,7 @@ cdef extern from "/home/ian/projects/tools/gpac/include/gpac/isomedia.h":
         GF_DataMap *editFileMap,
         # the interleaving time for dummy mode (in movie TimeScale)
         u32 interleavingTime
-        u8 openMode,
-        u8 storageMode,
+        u8 ooorageMode,
         # if true 3GPP text streams are read as MPEG-4 StreamingText
         u8 convert_streaming_text,
         u8 is_jp2,
@@ -230,7 +392,8 @@ cdef extern from "/home/ian/projects/tools/gpac/include/gpac/isomedia.h":
     u64 gf_isom_get_file_size(GF_ISOFile *the_file)
     u32 gf_isom_get_timescale(GF_ISOFile *the_file)
     void gf_isom_delete(GF_ISOFile *the_file)
-    #GF_ISOFile *gf_isom_create_movie(const char *filename, u32 openmode, const char *tmp_dir)
+    #returns 1 if one sample of the track is found to have a composition time offset (DTS<CTS)
+    bint gf_isom_has_time_offset(GF_ISOFile *the_file, u32 trackNumber)
 
     #check if the file has a top styp box and returns the brand and version of the first styp found
     bint gf_isom_has_segment(GF_ISOFile *isofile, u32 *brand, u32 *version)

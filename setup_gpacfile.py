@@ -6,9 +6,9 @@ from Cython.Build import cythonize
 
 extensions = [
     Extension("gpacfile", ["gpacfile.pyx"],
-              include_dirs = ['/home/ian/projects/tools/gpac/include'],
+              include_dirs = ['/usr/include/gpac'],
               libraries = ['gpac'],
-              library_dirs = ['/home/ian/projects/tools/gpac/bin/gcc']
+              library_dirs = ['/home/ian/projects/tools/gpac/bin/gcc/']
               )
 ]
 
