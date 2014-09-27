@@ -1,7 +1,7 @@
 CyGPAC
 ====== 
 
-A Limited Cython wrapper to GPAC
+A Limited Cython wrapper to GPAC built on Ubuntu 14.04 (trusty)
 
 This is a Cython wrapper to GPAC (http://gpac.wp.mines-telecom.fr/) that focuses on manipulating the MP4 box structure
 to allow the streaming of non-linear video fragments over DASH for Chrome.
