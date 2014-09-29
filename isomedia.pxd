@@ -1,10 +1,10 @@
 
-#include "isomedia_dev.pxd"
 include "bitstream.pxd"
 include "gptypes.pxd"
 include "mpeg4_odf.pxd"
 include "list.pxd"
 include "tools.pxd"
+
 
 cdef extern from "/home/ian/projects/tools/gpac/include/gpac/internal/isomedia_dev.h":
 
@@ -232,111 +232,183 @@ cdef extern from "/home/ian/projects/tools/gpac/include/gpac/internal/isomedia_d
         char packedLanguage[4],
         u16 reserved
 
-    ctypedef struct GF_SampleTableBox:
-        pass
+    ctypedef struct GF_DttsEntry:
+        u32 sampleCount,
+        s32 decodingOffset
 
-# typedef struct
-# {
-# GF_ISOM_BOX
-# GF_TimeToSampleBox *TimeToSample;
-# GF_CompositionOffsetBox *CompositionOffset;
-# GF_CompositionToDecodeBox *CompositionToDecode;
-# GF_SyncSampleBox *SyncSample;
-# GF_SampleDescriptionBox *SampleDescription;
-# GF_SampleSizeBox *SampleSize;
-# GF_SampleToChunkBox *SampleToChunk;
-# /*untyped, to handle 32 bits and 64 bits chunkOffsets*/
-#                                          GF_Box *ChunkOffset;
-# GF_ShadowSyncBox *ShadowSync;
-# GF_DegradationPriorityBox *DegradationPriority;
-# GF_PaddingBitsBox *PaddingBits;
-# GF_SampleDependencyTypeBox *SampleDep;
-# GF_SampleFragmentBox *Fragments;
-#
-# GF_SubSampleInformationBox *SubSamples;
-#
-# GF_List *sampleGroups;
-# GF_List *sampleGroupsDescription;
-#
-# GF_List *sai_sizes;
-# GF_List *sai_offsets;
-#
-# u32 MaxSamplePerChunk;
-# u16 groupID;
-# u16 trackPriority;
-# u32 currentEntryIndex;
-# } GF_SampleTableBox;
+    ctypedef struct GF_CompositionOffsetBox:
+        GF_ISOM_BOX box,
+        GF_DttsEntry *entries,
+        u32 nb_entries, alloc_size,
+        u32 w_LastSampleNumber,
+        #force one sample per entry
+        bint unpack_mode,
+        #cache for read
+        u32 r_currentEntryIndex,
+        u32 r_FirstSampleInEntry
+
+    ctypedef struct GF_CompositionToDecodeBox:
+        GF_ISOM_FULL_BOX fbox,
+        s32 compositionToDTSShift,
+        s32 leastDecodeToDisplayDelta,
+        s32 greatestDecodeToDisplayDelta,
+        s32 compositionStartTime,
+        s32 compositionEndTime
+
+    ctypedef struct GF_SyncSampleBox:
+        GF_ISOM_FULL_BOX fbox,
+        u32 alloc_size, nb_entries,
+        u32 *sampleNumbers,
+        #cache for READ mode (in write we realloc no matter what)
+        u32 r_LastSyncSample;
+        #0-based index in the array
+        u32 r_LastSampleIndex,
+        u32 *sampleNumbers,
+        #cache for READ mode (in write we realloc no matter what)
+        u32 r_LastSyncSample,
+        #0-based index in the array
+        u32 r_LastSampleIndex
+
+    ctypedef struct GF_SampleDescriptionBox:
+        GF_ISOM_FULL_BOX fbox
+
+    ctypedef struct GF_SampleSizeBox:
+        #if this is the compact version, sample size is actually fieldSize
+        u32 sampleSize,
+        u32 sampleCount,
+        u32 alloc_size,
+        u32 *sizes
+
+    ctypedef struct GF_SampleToChunkBox:
+        GF_ISOM_FULL_BOX fbox,
+        GF_StscEntry *entries,
+        u32 alloc_size, nb_entries,
+        #0-based cache for READ. In WRITE mode, we always have 1 sample per chunk so no need for a cache
+        u32 currentIndex,
+        #first sample number in this chunk
+        u32 firstSampleInCurrentChunk,
+        u32 currentChunk,
+        u32 ghostNumber
+
+    ctypedef struct GF_ShadowSyncBox:
+        GF_ISOM_FULL_BOX fbox,
+        GF_List *entries,
+        #Cache for read mode
+        u32 r_LastEntryIndex,
+        u32 r_LastFoundSample
+
+
+    ctypedef struct GF_DegradationPriorityBox:
+        GF_ISOM_FULL_BOX fbox,
+        u32 nb_entries,
+        u16 *priorities
+
+    ctypedef struct GF_PaddingBitsBox:
+        GF_ISOM_FULL_BOX fbox,
+        u32 SampleCount,
+        u8 *padbits
+
+    ctypedef struct GF_SampleDependencyTypeBox:
+        GF_ISOM_FULL_BOX fbox,
+        u32 sampleCount,
+        #each dep type is packed on 1 byte
+        u8 *sample_info;
+
+    ctypedef struct GF_SubSampleInformationBox:
+        GF_ISOM_FULL_BOX fbox,
+        GF_List *Samples
+
+    ctypedef struct GF_SampleTableBox:
+        GF_ISOM_BOX box,
+        GF_TimeToSampleBox *TimeToSample,
+        GF_CompositionOffsetBox *CompositionOffset,
+        GF_CompositionToDecodeBox *compositionToDecode,
+        GF_SyncSampleBox *SyncSample,
+        GF_SampleDescriptionBox *SampleDescription,
+        GF_SampleSizeBox *SampleSize,
+        GF_SampleToChunkBox *SampleToChunk,
+        #untyped, to handle 32 bits and 64 bits chunkOffsets
+        GF_Box *ChunkOffset,
+        GF_ShadowSyncBox *ShadowSync,
+        GF_PaddingBitsBox *PaddingBits,
+        GF_SampleDependencyTypeBox *SampleDep,
+        GF_SampleFragmentBox *Fragments,
+        GF_SubSampleInformationBox *SubSamples
+        GF_List *sampleGroups,
+        GF_List *sampleGroupsDescription,
+        GF_List *sai_sizes,
+        GF_List *sai_offsets,
+        u32 MaxSamplePerChunk,
+        u16 groupID,
+        u16 trackPriority,
+        u32 currentEntryIndex
+
+    ctypedef struct GF_DataMap:
+        u8	type,
+        u64	curPos,
+        u8	mode,
+        GF_BitStream *bs
 
     ctypedef struct GF_MediaInformationBox:
         GF_ISOM_BOX box,
         GF_DataInformationBox *dataInformation,
-        GF_SampleTableBox *sampleTable
-        pass
+        GF_SampleTableBox *sampleTable,
+        GF_Box *InfoHeader,
+        GF_DataMap *dataHandler,
+        u32 dataEntryIndex
 
-#     typedef struct __tag_media_info_box
-# {
-# GF_ISOM_BOX
-# GF_DataInformationBox *dataInformation;
-# GF_SampleTableBox *sampleTable;
-# GF_Box *InfoHeader;
-# struct __tag_data_map *dataHandler;
-# u32 dataEntryIndex;
-# } GF_MediaInformationBox;
 
     ctypedef struct GF_MediaBox:
         GF_ISOM_BOX box,
-        GF_TrackBox *media
+        GF_TrackBox *mediaTrack
         GF_MediaHeaderBox *mediaHeader
         GF_HandlerBox *handler,
-        GF_MediaInformationBox *information
-        pass
+        GF_MediaInformationBox *information,
+        u64 BytesMissing
 
-#
-#     typedef struct __tag_media_box
-# {
-# GF_ISOM_BOX
-# GF_TrackBox *mediaTrack;
-# GF_MediaHeaderBox *mediaHeader;
-# GF_HandlerBox *handler;
-# struct __tag_media_info_box *information;
-# u64 BytesMissing;
-# } GF_MediaBox;
+    ctypedef struct GF_EditListBox:
+        GF_ISOM_FULL_BOX fbox,
+        GF_List *entryList
+
+    ctypedef struct GF_EditBox:
+        GF_ISOM_BOX box,
+        GF_EditListBox *editList
+
+    ctypedef struct GF_TrackHeaderBox:
+        GF_ISOM_FULL_BOX fbox,
+        u64 creationTime,
+        u64 modificationTime,
+        u32 trackID,
+        u32 width, height,
+        u32 reserved1,
+        u64 duration,
+        u32 reserved2[2],
+        u16 layer,
+        u16 alternate_group,
+        u16 volume,
+        u16 reserved3,
+        u32 matrix[9]
 
     ctypedef struct GF_TrackBox:
         GF_ISOM_BOX box,
         GF_UserDataBox *udata,
+        GF_TrackHeaderBox *Header,
+        GF_MediaBox *Media,
+        GF_EditBox *editBox,
         GF_TrackReferenceBox *References
-        GF_MediaBox *Media
-        pass
+        GF_MetaBox *meta,
+        #other
+        GF_List *boxes,
+        GF_MovieBox *moov,
+        #private for media padding*
+        u32 padding_bytes,
+        #private for editing
+        char *name,
+        #private for editing*/
+        bint is_unpacked,
+        u64 dts_at_seg_start,
+        u32 sample_count_at_seg_start
 
-
-
-# typedef struct
-# {
-# GF_ISOM_BOX
-# GF_UserDataBox *udta;
-# GF_TrackHeaderBox *Header;
-# struct __tag_media_box *Media;
-# GF_EditBox *editBox;
-# GF_TrackReferenceBox *References;
-# /*meta box if any*/
-#               struct __tag_meta_box *meta;
-# /*other*/
-#   GF_List *boxes;
-#
-# GF_MovieBox *moov;
-# /*private for media padding*/
-#                     u32 padding_bytes;
-# /*private for editing*/
-#         char *name;
-# /*private for editing*/
-#         Bool is_unpacked;
-#
-# #ifndef	GPAC_DISABLE_ISOM_FRAGMENTS
-# u64 dts_at_seg_start;
-# u32 sample_count_at_seg_start;
-# #endif
-#} GF_TrackBox;
 
     GF_ISOFile *gf_isom_create_movie(const char *fileName, u32 OpenMode, const char *tmp_dir)
     GF_Box *ftyp_New()
@@ -344,7 +416,16 @@ cdef extern from "/home/ian/projects/tools/gpac/include/gpac/internal/isomedia_d
     GF_Err ftyp_Read(GF_Box *s,GF_BitStream *bs)
     GF_Err ftyp_Write(GF_Box *s, GF_BitStream *bs)
     GF_Err ftyp_Size(GF_Box *s)
-
+    void tfdt_del(GF_Box *)
+    GF_Err tfdt_Write(GF_Box *s, GF_BitStream *bs)
+    GF_Err tfdt_Size(GF_Box *s)
+    GF_Err tfdt_Read(GF_Box *s, GF_BitStream *bs)
+    GF_Err tfdt_dump(GF_Box *a, FILE * trace)
+    GF_Err moof_Write(GF_Box *s, GF_BitStream *bs)
+    GF_Err moof_Read(GF_Box *s, GF_BitStream *bs)
+    GF_Err moof_dump(GF_Box *a, FILE * trace)
+    void moof_del(GF_Box *s)
+    GF_Box *moof_New()
 
 cdef extern from "/home/ian/projects/tools/gpac/include/gpac/isomedia.h":
     ctypedef struct GF_ISOFile:
@@ -392,8 +473,25 @@ cdef extern from "/home/ian/projects/tools/gpac/include/gpac/isomedia.h":
     u64 gf_isom_get_file_size(GF_ISOFile *the_file)
     u32 gf_isom_get_timescale(GF_ISOFile *the_file)
     void gf_isom_delete(GF_ISOFile *the_file)
-    #returns 1 if one sample of the track is found to have a composition time offset (DTS<CTS)
+    # returns 1 if one sample of the track is found to have a composition time offset (DTS<CTS)
     bint gf_isom_has_time_offset(GF_ISOFile *the_file, u32 trackNumber)
-
-    #check if the file has a top styp box and returns the brand and version of the first styp found
+    # check if the file has a top styp box and returns the brand and version of the first styp found
     bint gf_isom_has_segment(GF_ISOFile *isofile, u32 *brand, u32 *version)
+    # Get the desired segment information
+    GF_Err gf_isom_get_edit_segment(GF_ISOFile *the_file, u32 trackNumber, u32 SegmentIndex, u64 *EditTime, u64 *SegmentDuration, u64 *MediaTime, u8 *EditMode)
+    # update or insert a new edit segment in the track time line. Edits are used to modify
+    # the media normal timing. EditTime and EditDuration are expressed in Movie TimeScale
+    # If a segment with EditTime already exists, IT IS ERASED
+    # if there is a segment before this new one, its duration is adjust to match EditTime of
+    # the new segment
+    # WARNING: The first segment always have an EditTime of 0. You should insert an empty or dwelled segment first.
+    GF_Err gf_isom_set_edit_segment(GF_ISOFile *the_file, u32 trackNumber, u64 EditTime, u64 EditDuration, u64 MediaTime, u8 EditMode)
+    # same as above except only modifies duartion type and mediaType
+    GF_Err gf_isom_modify_edit_segment(GF_ISOFile *the_file, u32 trackNumber, u32 seg_index, u64 EditDuration, u64 MediaTime, u8 EditMode);
+    # same as above except only appends new segment
+    GF_Err gf_isom_append_edit_segment(GF_ISOFile *the_file, u32 trackNumber, u64 EditDuration, u64 MediaTime, u8 EditMode);
+    # remove the edit segments for the whole track
+    GF_Err gf_isom_remove_edit_segments(GF_ISOFile *the_file, u32 trackNumber);
+    # remove the given edit segment (1-based index). If this is not the last segment, the next segment duration
+    # is updated to maintain a continous timeline*/
+    GF_Err gf_isom_remove_edit_segment(GF_ISOFile *the_file, u32 trackNumber, u32 seg_index);

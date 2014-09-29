@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--MP4Box dump trace-->
+<IsoMediaFile Name="small.mp4">
+<FileTypeBox MajorBrand="mp42" MinorVersion="0">
+<BoxInfo Size="28" Type="ftyp"/>
+<BrandEntry AlternateBrand="mp42"/>
+<BrandEntry AlternateBrand="isom"/>
+<BrandEntry AlternateBrand="avc1"/>
+</FileTypeBox>
+<FreeSpaceBox size="124">
+<BoxInfo Size="132" Type="free"/>
+</FreeSpaceBox>
+<MediaDataBox dataSize="379872">
+<BoxInfo Size="379880" Type="mdat"/>
+</MediaDataBox>
+<MovieBox>
+<BoxInfo Size="3459" Type="moov"/>
+<ObjectDescriptorBox>
+<BoxInfo Size="24" Type="iods"/>
+<FullBoxInfo Version="0" Flags="0"/>
+ <MP4InitialObjectDescriptor objectDescriptorID="od1" binaryID="1" >
+  <Profile audioProfileLevelIndication="15" visualProfileLevelIndication="127" sceneProfileLevelIndication="255" graphicsProfileLevelIndication="255" ODProfileLevelIndication="255" />
+  <Descr>
+  </Descr>
+ </MP4InitialObjectDescriptor>
+</ObjectDescriptorBox>
+<MovieHeaderBox CreationTime="3351965351" ModificationTime="3351965352" TimeScale="90000" Duration="501120" NextTrackID="3">
+<BoxInfo Size="108" Type="mvhd"/>
+<FullBoxInfo Version="0" Flags="0"/>
+</MovieHeaderBox><TrackBox>
+<BoxInfo Size="1546" Type="trak"/>
+<TrackHeaderBox CreationTime="3351965351" ModificationTime="3351965352" TrackID="1" Duration="498000" Width="560.00" Height="320.00">
+<Matrix m11="0x00010000" m12="0x00000000" m13="0x00000000" 								m21="0x00000000" m22="0x00010000" m23="0x00000000" 								m31="0x00000000" m32="0x00000000" m33="0x40000000"/><BoxInfo Size="92" Type="tkhd"/>
+<FullBoxInfo Version="0" Flags="1"/>
+</TrackHeaderBox>
+<MediaBox>
+<BoxInfo Size="1446" Type="mdia"/>
+<MediaHeaderBox CreationTime="3351965351" ModificationTime="3351965352" TimeScale="90000" Duration="498000" LanguageCode="und">
+<BoxInfo Size="32" Type="mdhd"/>
+<FullBoxInfo Version="0" Flags="0"/>
+</MediaHeaderBox>
+<HandlerBox Type="vide" Name="" reserved1="0" reserved2="data:application/octet-string,%00%00%00%00%00%00%00%00%00%00%00%00">
+<BoxInfo Size="33" Type="hdlr"/>
+<FullBoxInfo Version="0" Flags="0"/>
+</HandlerBox>
+<MediaInformationBox>
+<BoxInfo Size="1373" Type="minf"/>
+<VideoMediaHeaderBox>
+<BoxInfo Size="20" Type="vmhd"/>
+<FullBoxInfo Version="0" Flags="1"/>
+</VideoMediaHeaderBox>
+<DataInformationBox><BoxInfo Size="36" Type="dinf"/>
+<DataReferenceBox>
+<BoxInfo Size="28" Type="dref"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<URLDataEntryBox>
+<!--Data is contained in the movie file-->
+<BoxInfo Size="12" Type="url "/>
+<FullBoxInfo Version="0" Flags="1"/>
+</URLDataEntryBox>
+</DataReferenceBox>
+</DataInformationBox>
+<SampleTableBox>
+<BoxInfo Size="1309" Type="stbl"/>
+<SampleDescriptionBox>
+<BoxInfo Size="171" Type="stsd"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<AVCSampleEntryBox DataReferenceIndex="1" Width="560" Height="320" XDPI="4718592" YDPI="4718592" BitDepth="24" CompressorName="JVT/AVC Coding"
+>
+<AVCConfigurationBox>
+<AVCDecoderConfigurationRecord configurationVersion="1" AVCProfileIndication="66" profile_compatibility="192" AVCLevelIndication="30" nal_unit_size="4">
+<sequenceParameterSet size="27" content="data:application/octet-string,%67%42%C0%1E%9E%21%81%18%53%4D%40%40%40%50%00%00%03%00%10%00%00%03%03%C8%F1%62%EE"/>
+<pictureParameterSet size="5" content="data:application/octet-string,%68%CE%06%CB%20"/>
+</AVCDecoderConfigurationRecord>
+<BoxInfo Size="51" Type="avcC"/>
+</AVCConfigurationBox>
+<BoxInfo Size="155" Type="avc1"/>
+</AVCSampleEntryBox>
+</SampleDescriptionBox>
+<TimeToSampleBox EntryCount="1">
+<BoxInfo Size="24" Type="stts"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<TimeToSampleEntry SampleDelta="3000" SampleCount="166"/>
+</TimeToSampleBox>
+<SyncSampleBox EntryCount="1">
+<BoxInfo Size="20" Type="stss"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<SyncSampleEntry sampleNumber="1"/>
+</SyncSampleBox>
+<SampleToChunkBox EntryCount="2">
+<BoxInfo Size="40" Type="stsc"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<SampleToChunkEntry FirstChunk="1" SamplesPerChunk="4" SampleDescriptionIndex="1"/>
+<SampleToChunkEntry FirstChunk="42" SamplesPerChunk="2" SampleDescriptionIndex="1"/>
+</SampleToChunkBox>
+<SampleSizeBox SampleCount="166">
+<BoxInfo Size="684" Type="stsz"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<SampleSizeEntry Size="22055"/>
+<SampleSizeEntry Size="2848"/>
+<SampleSizeEntry Size="1468"/>
+<SampleSizeEntry Size="1506"/>
+<SampleSizeEntry Size="1473"/>
+<SampleSizeEntry Size="1079"/>
+<SampleSizeEntry Size="1031"/>
+<SampleSizeEntry Size="950"/>
+<SampleSizeEntry Size="1605"/>
+<SampleSizeEntry Size="883"/>
+<SampleSizeEntry Size="1298"/>
+<SampleSizeEntry Size="806"/>
+<SampleSizeEntry Size="745"/>
+<SampleSizeEntry Size="891"/>
+<SampleSizeEntry Size="842"/>
+<SampleSizeEntry Size="875"/>
+<SampleSizeEntry Size="694"/>
+<SampleSizeEntry Size="844"/>
+<SampleSizeEntry Size="634"/>
+<SampleSizeEntry Size="711"/>
+<SampleSizeEntry Size="558"/>
+<SampleSizeEntry Size="790"/>
+<SampleSizeEntry Size="550"/>
+<SampleSizeEntry Size="639"/>
+<SampleSizeEntry Size="492"/>
+<SampleSizeEntry Size="490"/>
+<SampleSizeEntry Size="501"/>
+<SampleSizeEntry Size="491"/>
+<SampleSizeEntry Size="506"/>
+<SampleSizeEntry Size="487"/>
+<SampleSizeEntry Size="508"/>
+<SampleSizeEntry Size="477"/>
+<SampleSizeEntry Size="454"/>
+<SampleSizeEntry Size="430"/>
+<SampleSizeEntry Size="456"/>
+<SampleSizeEntry Size="441"/>
+<SampleSizeEntry Size="400"/>
+<SampleSizeEntry Size="403"/>
+<SampleSizeEntry Size="396"/>
+<SampleSizeEntry Size="474"/>
+<SampleSizeEntry Size="450"/>
+<SampleSizeEntry Size="1488"/>
+<SampleSizeEntry Size="1976"/>
+<SampleSizeEntry Size="1658"/>
+<SampleSizeEntry Size="2473"/>
+<SampleSizeEntry Size="2604"/>
+<SampleSizeEntry Size="2684"/>
+<SampleSizeEntry Size="3251"/>
+<SampleSizeEntry Size="2444"/>
+<SampleSizeEntry Size="2386"/>
+<SampleSizeEntry Size="3076"/>
+<SampleSizeEntry Size="3521"/>
+<SampleSizeEntry Size="3956"/>
+<SampleSizeEntry Size="4168"/>
+<SampleSizeEntry Size="4358"/>
+<SampleSizeEntry Size="4193"/>
+<SampleSizeEntry Size="3171"/>
+<SampleSizeEntry Size="3121"/>
+<SampleSizeEntry Size="2882"/>
+<SampleSizeEntry Size="3085"/>
+<SampleSizeEntry Size="3890"/>
+<SampleSizeEntry Size="2683"/>
+<SampleSizeEntry Size="3343"/>
+<SampleSizeEntry Size="2784"/>
+<SampleSizeEntry Size="2574"/>
+<SampleSizeEntry Size="2923"/>
+<SampleSizeEntry Size="2164"/>
+<SampleSizeEntry Size="3126"/>
+<SampleSizeEntry Size="2534"/>
+<SampleSizeEntry Size="1677"/>
+<SampleSizeEntry Size="1272"/>
+<SampleSizeEntry Size="1930"/>
+<SampleSizeEntry Size="1985"/>
+<SampleSizeEntry Size="2547"/>
+<SampleSizeEntry Size="1991"/>
+<SampleSizeEntry Size="2763"/>
+<SampleSizeEntry Size="2770"/>
+<SampleSizeEntry Size="2932"/>
+<SampleSizeEntry Size="3112"/>
+<SampleSizeEntry Size="2714"/>
+<SampleSizeEntry Size="3168"/>
+<SampleSizeEntry Size="3437"/>
+<SampleSizeEntry Size="3134"/>
+<SampleSizeEntry Size="4092"/>
+<SampleSizeEntry Size="3714"/>
+<SampleSizeEntry Size="2937"/>
+<SampleSizeEntry Size="3556"/>
+<SampleSizeEntry Size="3364"/>
+<SampleSizeEntry Size="2583"/>
+<SampleSizeEntry Size="4522"/>
+<SampleSizeEntry Size="4709"/>
+<SampleSizeEntry Size="3451"/>
+<SampleSizeEntry Size="4768"/>
+<SampleSizeEntry Size="5080"/>
+<SampleSizeEntry Size="4425"/>
+<SampleSizeEntry Size="3673"/>
+<SampleSizeEntry Size="4117"/>
+<SampleSizeEntry Size="5761"/>
+<SampleSizeEntry Size="2484"/>
+<SampleSizeEntry Size="1771"/>
+<SampleSizeEntry Size="1519"/>
+<SampleSizeEntry Size="1418"/>
+<SampleSizeEntry Size="983"/>
+<SampleSizeEntry Size="1037"/>
+<SampleSizeEntry Size="955"/>
+<SampleSizeEntry Size="1131"/>
+<SampleSizeEntry Size="832"/>
+<SampleSizeEntry Size="816"/>
+<SampleSizeEntry Size="734"/>
+<SampleSizeEntry Size="942"/>
+<SampleSizeEntry Size="1487"/>
+<SampleSizeEntry Size="1132"/>
+<SampleSizeEntry Size="1385"/>
+<SampleSizeEntry Size="1280"/>
+<SampleSizeEntry Size="1697"/>
+<SampleSizeEntry Size="821"/>
+<SampleSizeEntry Size="1050"/>
+<SampleSizeEntry Size="1018"/>
+<SampleSizeEntry Size="1597"/>
+<SampleSizeEntry Size="1494"/>
+<SampleSizeEntry Size="1128"/>
+<SampleSizeEntry Size="726"/>
+<SampleSizeEntry Size="1205"/>
+<SampleSizeEntry Size="729"/>
+<SampleSizeEntry Size="639"/>
+<SampleSizeEntry Size="589"/>
+<SampleSizeEntry Size="637"/>
+<SampleSizeEntry Size="908"/>
+<SampleSizeEntry Size="518"/>
+<SampleSizeEntry Size="513"/>
+<SampleSizeEntry Size="1919"/>
+<SampleSizeEntry Size="1519"/>
+<SampleSizeEntry Size="1464"/>
+<SampleSizeEntry Size="1034"/>
+<SampleSizeEntry Size="665"/>
+<SampleSizeEntry Size="797"/>
+<SampleSizeEntry Size="1989"/>
+<SampleSizeEntry Size="1452"/>
+<SampleSizeEntry Size="1144"/>
+<SampleSizeEntry Size="2161"/>
+<SampleSizeEntry Size="2201"/>
+<SampleSizeEntry Size="2281"/>
+<SampleSizeEntry Size="2201"/>
+<SampleSizeEntry Size="1395"/>
+<SampleSizeEntry Size="1991"/>
+<SampleSizeEntry Size="2109"/>
+<SampleSizeEntry Size="2905"/>
+<SampleSizeEntry Size="2614"/>
+<SampleSizeEntry Size="1722"/>
+<SampleSizeEntry Size="1529"/>
+<SampleSizeEntry Size="1838"/>
+<SampleSizeEntry Size="1771"/>
+<SampleSizeEntry Size="1222"/>
+<SampleSizeEntry Size="1210"/>
+<SampleSizeEntry Size="1382"/>
+<SampleSizeEntry Size="1073"/>
+<SampleSizeEntry Size="1674"/>
+<SampleSizeEntry Size="1743"/>
+<SampleSizeEntry Size="1790"/>
+<SampleSizeEntry Size="1175"/>
+<SampleSizeEntry Size="579"/>
+<SampleSizeEntry Size="994"/>
+<SampleSizeEntry Size="1030"/>
+<SampleSizeEntry Size="742"/>
+<SampleSizeEntry Size="619"/>
+<SampleSizeEntry Size="629"/>
+</SampleSizeBox>
+<ChunkOffsetBox EntryCount="42">
+<BoxInfo Size="184" Type="stco"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<ChunkEntry offset="168"/>
+<ChunkEntry offset="29670"/>
+<ChunkEntry offset="35828"/>
+<ChunkEntry offset="41992"/>
+<ChunkEntry offset="46948"/>
+<ChunkEntry offset="51365"/>
+<ChunkEntry offset="55256"/>
+<ChunkEntry offset="58533"/>
+<ChunkEntry offset="60511"/>
+<ChunkEntry offset="63583"/>
+<ChunkEntry offset="66625"/>
+<ChunkEntry offset="73667"/>
+<ChunkEntry offset="86405"/>
+<ChunkEntry offset="99454"/>
+<ChunkEntry offset="117926"/>
+<ChunkEntry offset="132032"/>
+<ChunkEntry offset="146514"/>
+<ChunkEntry offset="157301"/>
+<ChunkEntry offset="166428"/>
+<ChunkEntry offset="177318"/>
+<ChunkEntry offset="190310"/>
+<ChunkEntry offset="205569"/>
+<ChunkEntry offset="220588"/>
+<ChunkEntry offset="237207"/>
+<ChunkEntry offset="256612"/>
+<ChunkEntry offset="271882"/>
+<ChunkEntry offset="278121"/>
+<ChunkEntry offset="281855"/>
+<ChunkEntry offset="287705"/>
+<ChunkEntry offset="294467"/>
+<ChunkEntry offset="301211"/>
+<ChunkEntry offset="306601"/>
+<ChunkEntry offset="311031"/>
+<ChunkEntry offset="317332"/>
+<ChunkEntry offset="322924"/>
+<ChunkEntry offset="331323"/>
+<ChunkEntry offset="339401"/>
+<ChunkEntry offset="350704"/>
+<ChunkEntry offset="359298"/>
+<ChunkEntry offset="365867"/>
+<ChunkEntry offset="373722"/>
+<ChunkEntry offset="378471"/>
+</ChunkOffsetBox>
+<SampleDependencyTypeBox SampleCount="166">
+<BoxInfo Size="178" Type="sdtp"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+<SampleDependencyEntry dependsOnOther="unknown" dependedOn="yes" hasRedundancy="unknown"  />
+</SampleDependencyTypeBox>
+</SampleTableBox>
+</MediaInformationBox>
+</MediaBox>
+</TrackBox>
+<TrackBox>
+<BoxInfo Size="1662" Type="trak"/>
+<TrackHeaderBox CreationTime="3351965351" ModificationTime="3351965352" TrackID="2" Duration="501120" Volume="1.00">
+<BoxInfo Size="92" Type="tkhd"/>
+<FullBoxInfo Version="0" Flags="3"/>
+</TrackHeaderBox>
+<MediaBox>
+<BoxInfo Size="1540" Type="mdia"/>
+<MediaHeaderBox CreationTime="3351965351" ModificationTime="3351965352" TimeScale="48000" Duration="267264" LanguageCode="eng">
+<BoxInfo Size="32" Type="mdhd"/>
+<FullBoxInfo Version="0" Flags="0"/>
+</MediaHeaderBox>
+<HandlerBox Type="soun" Name="" reserved1="0" reserved2="data:application/octet-string,%00%00%00%00%00%00%00%00%00%00%00%00">
+<BoxInfo Size="33" Type="hdlr"/>
+<FullBoxInfo Version="0" Flags="0"/>
+</HandlerBox>
+<MediaInformationBox>
+<BoxInfo Size="1467" Type="minf"/>
+<SoundMediaHeaderBox>
+<BoxInfo Size="16" Type="smhd"/>
+<FullBoxInfo Version="0" Flags="0"/>
+</SoundMediaHeaderBox>
+<DataInformationBox><BoxInfo Size="36" Type="dinf"/>
+<DataReferenceBox>
+<BoxInfo Size="28" Type="dref"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<URLDataEntryBox>
+<!--Data is contained in the movie file-->
+<BoxInfo Size="12" Type="url "/>
+<FullBoxInfo Version="0" Flags="1"/>
+</URLDataEntryBox>
+</DataReferenceBox>
+</DataInformationBox>
+<SampleTableBox>
+<BoxInfo Size="1407" Type="stbl"/>
+<SampleDescriptionBox>
+<BoxInfo Size="103" Type="stsd"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<MPEGAudioSampleDescriptionBox DataReferenceIndex="1" SampleRate="48000" Channels="1" BitsPerSample="16">
+<BoxInfo Size="87" Type="mp4a"/>
+<MPEG4ESDescriptorBox>
+<BoxInfo Size="51" Type="esds"/>
+<FullBoxInfo Version="0" Flags="0"/>
+ <ES_Descriptor ES_ID="es0" >
+  <decConfigDescr>
+   <DecoderConfigDescriptor objectTypeIndication="64" streamType="5" bufferSizeDB="280" maxBitrate="91632" avgBitrate="83051" >
+    <decSpecificInfo>
+     <DecoderSpecificInfo type="auto" src="data:application/octet-string,%11%88" />
+    </decSpecificInfo>
+   </DecoderConfigDescriptor>
+  </decConfigDescr>
+  <slConfigDescr>
+   <SLConfigDescriptor >
+    <predefined value="2" />
+    <custom >
+    </custom>
+   </SLConfigDescriptor>
+  </slConfigDescr>
+ </ES_Descriptor>
+</MPEG4ESDescriptorBox>
+</MPEGAudioSampleDescriptionBox>
+</SampleDescriptionBox>
+<TimeToSampleBox EntryCount="1">
+<BoxInfo Size="24" Type="stts"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<TimeToSampleEntry SampleDelta="1024" SampleCount="261"/>
+</TimeToSampleBox>
+<SampleToChunkBox EntryCount="2">
+<BoxInfo Size="40" Type="stsc"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<SampleToChunkEntry FirstChunk="1" SamplesPerChunk="7" SampleDescriptionIndex="1"/>
+<SampleToChunkEntry FirstChunk="38" SamplesPerChunk="2" SampleDescriptionIndex="1"/>
+</SampleToChunkBox>
+<SampleSizeBox SampleCount="261">
+<BoxInfo Size="1064" Type="stsz"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<SampleSizeEntry Size="247"/>
+<SampleSizeEntry Size="219"/>
+<SampleSizeEntry Size="225"/>
+<SampleSizeEntry Size="229"/>
+<SampleSizeEntry Size="233"/>
+<SampleSizeEntry Size="232"/>
+<SampleSizeEntry Size="240"/>
+<SampleSizeEntry Size="241"/>
+<SampleSizeEntry Size="239"/>
+<SampleSizeEntry Size="216"/>
+<SampleSizeEntry Size="230"/>
+<SampleSizeEntry Size="231"/>
+<SampleSizeEntry Size="233"/>
+<SampleSizeEntry Size="235"/>
+<SampleSizeEntry Size="234"/>
+<SampleSizeEntry Size="232"/>
+<SampleSizeEntry Size="225"/>
+<SampleSizeEntry Size="231"/>
+<SampleSizeEntry Size="215"/>
+<SampleSizeEntry Size="218"/>
+<SampleSizeEntry Size="217"/>
+<SampleSizeEntry Size="219"/>
+<SampleSizeEntry Size="233"/>
+<SampleSizeEntry Size="238"/>
+<SampleSizeEntry Size="229"/>
+<SampleSizeEntry Size="225"/>
+<SampleSizeEntry Size="230"/>
+<SampleSizeEntry Size="229"/>
+<SampleSizeEntry Size="216"/>
+<SampleSizeEntry Size="221"/>
+<SampleSizeEntry Size="221"/>
+<SampleSizeEntry Size="213"/>
+<SampleSizeEntry Size="234"/>
+<SampleSizeEntry Size="221"/>
+<SampleSizeEntry Size="208"/>
+<SampleSizeEntry Size="214"/>
+<SampleSizeEntry Size="233"/>
+<SampleSizeEntry Size="188"/>
+<SampleSizeEntry Size="171"/>
+<SampleSizeEntry Size="179"/>
+<SampleSizeEntry Size="181"/>
+<SampleSizeEntry Size="188"/>
+<SampleSizeEntry Size="206"/>
+<SampleSizeEntry Size="180"/>
+<SampleSizeEntry Size="182"/>
+<SampleSizeEntry Size="179"/>
+<SampleSizeEntry Size="182"/>
+<SampleSizeEntry Size="183"/>
+<SampleSizeEntry Size="191"/>
+<SampleSizeEntry Size="183"/>
+<SampleSizeEntry Size="205"/>
+<SampleSizeEntry Size="193"/>
+<SampleSizeEntry Size="186"/>
+<SampleSizeEntry Size="167"/>
+<SampleSizeEntry Size="180"/>
+<SampleSizeEntry Size="177"/>
+<SampleSizeEntry Size="190"/>
+<SampleSizeEntry Size="208"/>
+<SampleSizeEntry Size="186"/>
+<SampleSizeEntry Size="188"/>
+<SampleSizeEntry Size="196"/>
+<SampleSizeEntry Size="198"/>
+<SampleSizeEntry Size="203"/>
+<SampleSizeEntry Size="196"/>
+<SampleSizeEntry Size="195"/>
+<SampleSizeEntry Size="200"/>
+<SampleSizeEntry Size="210"/>
+<SampleSizeEntry Size="210"/>
+<SampleSizeEntry Size="214"/>
+<SampleSizeEntry Size="245"/>
+<SampleSizeEntry Size="250"/>
+<SampleSizeEntry Size="246"/>
+<SampleSizeEntry Size="258"/>
+<SampleSizeEntry Size="252"/>
+<SampleSizeEntry Size="252"/>
+<SampleSizeEntry Size="238"/>
+<SampleSizeEntry Size="230"/>
+<SampleSizeEntry Size="234"/>
+<SampleSizeEntry Size="234"/>
+<SampleSizeEntry Size="232"/>
+<SampleSizeEntry Size="222"/>
+<SampleSizeEntry Size="223"/>
+<SampleSizeEntry Size="231"/>
+<SampleSizeEntry Size="246"/>
+<SampleSizeEntry Size="255"/>
+<SampleSizeEntry Size="259"/>
+<SampleSizeEntry Size="246"/>
+<SampleSizeEntry Size="264"/>
+<SampleSizeEntry Size="259"/>
+<SampleSizeEntry Size="253"/>
+<SampleSizeEntry Size="261"/>
+<SampleSizeEntry Size="258"/>
+<SampleSizeEntry Size="256"/>
+<SampleSizeEntry Size="276"/>
+<SampleSizeEntry Size="280"/>
+<SampleSizeEntry Size="253"/>
+<SampleSizeEntry Size="251"/>
+<SampleSizeEntry Size="273"/>
+<SampleSizeEntry Size="261"/>
+<SampleSizeEntry Size="261"/>
+<SampleSizeEntry Size="266"/>
+<SampleSizeEntry Size="257"/>
+<SampleSizeEntry Size="243"/>
+<SampleSizeEntry Size="247"/>
+<SampleSizeEntry Size="247"/>
+<SampleSizeEntry Size="257"/>
+<SampleSizeEntry Size="258"/>
+<SampleSizeEntry Size="248"/>
+<SampleSizeEntry Size="248"/>
+<SampleSizeEntry Size="239"/>
+<SampleSizeEntry Size="237"/>
+<SampleSizeEntry Size="227"/>
+<SampleSizeEntry Size="236"/>
+<SampleSizeEntry Size="226"/>
+<SampleSizeEntry Size="232"/>
+<SampleSizeEntry Size="220"/>
+<SampleSizeEntry Size="224"/>
+<SampleSizeEntry Size="243"/>
+<SampleSizeEntry Size="223"/>
+<SampleSizeEntry Size="225"/>
+<SampleSizeEntry Size="207"/>
+<SampleSizeEntry Size="206"/>
+<SampleSizeEntry Size="216"/>
+<SampleSizeEntry Size="206"/>
+<SampleSizeEntry Size="199"/>
+<SampleSizeEntry Size="205"/>
+<SampleSizeEntry Size="183"/>
+<SampleSizeEntry Size="175"/>
+<SampleSizeEntry Size="200"/>
+<SampleSizeEntry Size="215"/>
+<SampleSizeEntry Size="229"/>
+<SampleSizeEntry Size="228"/>
+<SampleSizeEntry Size="198"/>
+<SampleSizeEntry Size="209"/>
+<SampleSizeEntry Size="213"/>
+<SampleSizeEntry Size="229"/>
+<SampleSizeEntry Size="216"/>
+<SampleSizeEntry Size="200"/>
+<SampleSizeEntry Size="190"/>
+<SampleSizeEntry Size="191"/>
+<SampleSizeEntry Size="203"/>
+<SampleSizeEntry Size="210"/>
+<SampleSizeEntry Size="200"/>
+<SampleSizeEntry Size="202"/>
+<SampleSizeEntry Size="177"/>
+<SampleSizeEntry Size="163"/>
+<SampleSizeEntry Size="199"/>
+<SampleSizeEntry Size="220"/>
+<SampleSizeEntry Size="217"/>
+<SampleSizeEntry Size="221"/>
+<SampleSizeEntry Size="209"/>
+<SampleSizeEntry Size="210"/>
+<SampleSizeEntry Size="194"/>
+<SampleSizeEntry Size="188"/>
+<SampleSizeEntry Size="177"/>
+<SampleSizeEntry Size="155"/>
+<SampleSizeEntry Size="137"/>
+<SampleSizeEntry Size="162"/>
+<SampleSizeEntry Size="159"/>
+<SampleSizeEntry Size="181"/>
+<SampleSizeEntry Size="166"/>
+<SampleSizeEntry Size="178"/>
+<SampleSizeEntry Size="181"/>
+<SampleSizeEntry Size="174"/>
+<SampleSizeEntry Size="180"/>
+<SampleSizeEntry Size="176"/>
+<SampleSizeEntry Size="198"/>
+<SampleSizeEntry Size="195"/>
+<SampleSizeEntry Size="213"/>
+<SampleSizeEntry Size="228"/>
+<SampleSizeEntry Size="246"/>
+<SampleSizeEntry Size="214"/>
+<SampleSizeEntry Size="219"/>
+<SampleSizeEntry Size="204"/>
+<SampleSizeEntry Size="231"/>
+<SampleSizeEntry Size="249"/>
+<SampleSizeEntry Size="203"/>
+<SampleSizeEntry Size="216"/>
+<SampleSizeEntry Size="214"/>
+<SampleSizeEntry Size="228"/>
+<SampleSizeEntry Size="241"/>
+<SampleSizeEntry Size="228"/>
+<SampleSizeEntry Size="230"/>
+<SampleSizeEntry Size="223"/>
+<SampleSizeEntry Size="238"/>
+<SampleSizeEntry Size="215"/>
+<SampleSizeEntry Size="199"/>
+<SampleSizeEntry Size="231"/>
+<SampleSizeEntry Size="249"/>
+<SampleSizeEntry Size="237"/>
+<SampleSizeEntry Size="207"/>
+<SampleSizeEntry Size="241"/>
+<SampleSizeEntry Size="230"/>
+<SampleSizeEntry Size="220"/>
+<SampleSizeEntry Size="228"/>
+<SampleSizeEntry Size="239"/>
+<SampleSizeEntry Size="229"/>
+<SampleSizeEntry Size="241"/>
+<SampleSizeEntry Size="227"/>
+<SampleSizeEntry Size="236"/>
+<SampleSizeEntry Size="236"/>
+<SampleSizeEntry Size="243"/>
+<SampleSizeEntry Size="245"/>
+<SampleSizeEntry Size="253"/>
+<SampleSizeEntry Size="267"/>
+<SampleSizeEntry Size="272"/>
+<SampleSizeEntry Size="273"/>
+<SampleSizeEntry Size="259"/>
+<SampleSizeEntry Size="257"/>
+<SampleSizeEntry Size="251"/>
+<SampleSizeEntry Size="250"/>
+<SampleSizeEntry Size="231"/>
+<SampleSizeEntry Size="229"/>
+<SampleSizeEntry Size="240"/>
+<SampleSizeEntry Size="210"/>
+<SampleSizeEntry Size="229"/>
+<SampleSizeEntry Size="243"/>
+<SampleSizeEntry Size="241"/>
+<SampleSizeEntry Size="242"/>
+<SampleSizeEntry Size="255"/>
+<SampleSizeEntry Size="247"/>
+<SampleSizeEntry Size="238"/>
+<SampleSizeEntry Size="213"/>
+<SampleSizeEntry Size="217"/>
+<SampleSizeEntry Size="234"/>
+<SampleSizeEntry Size="227"/>
+<SampleSizeEntry Size="223"/>
+<SampleSizeEntry Size="247"/>
+<SampleSizeEntry Size="255"/>
+<SampleSizeEntry Size="248"/>
+<SampleSizeEntry Size="250"/>
+<SampleSizeEntry Size="253"/>
+<SampleSizeEntry Size="247"/>
+<SampleSizeEntry Size="249"/>
+<SampleSizeEntry Size="251"/>
+<SampleSizeEntry Size="248"/>
+<SampleSizeEntry Size="246"/>
+<SampleSizeEntry Size="240"/>
+<SampleSizeEntry Size="254"/>
+<SampleSizeEntry Size="258"/>
+<SampleSizeEntry Size="233"/>
+<SampleSizeEntry Size="236"/>
+<SampleSizeEntry Size="236"/>
+<SampleSizeEntry Size="231"/>
+<SampleSizeEntry Size="234"/>
+<SampleSizeEntry Size="222"/>
+<SampleSizeEntry Size="226"/>
+<SampleSizeEntry Size="201"/>
+<SampleSizeEntry Size="212"/>
+<SampleSizeEntry Size="212"/>
+<SampleSizeEntry Size="199"/>
+<SampleSizeEntry Size="201"/>
+<SampleSizeEntry Size="200"/>
+<SampleSizeEntry Size="193"/>
+<SampleSizeEntry Size="192"/>
+<SampleSizeEntry Size="189"/>
+<SampleSizeEntry Size="222"/>
+<SampleSizeEntry Size="203"/>
+<SampleSizeEntry Size="205"/>
+<SampleSizeEntry Size="212"/>
+<SampleSizeEntry Size="109"/>
+</SampleSizeBox>
+<ChunkOffsetBox EntryCount="38">
+<BoxInfo Size="168" Type="stco"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<ChunkEntry offset="28045"/>
+<ChunkEntry offset="34203"/>
+<ChunkEntry offset="40420"/>
+<ChunkEntry offset="45345"/>
+<ChunkEntry offset="49831"/>
+<ChunkEntry offset="53902"/>
+<ChunkEntry offset="57230"/>
+<ChunkEntry offset="62292"/>
+<ChunkEntry offset="65256"/>
+<ChunkEntry offset="72197"/>
+<ChunkEntry offset="84679"/>
+<ChunkEntry offset="97832"/>
+<ChunkEntry offset="116129"/>
+<ChunkEntry offset="130185"/>
+<ChunkEntry offset="144732"/>
+<ChunkEntry offset="164714"/>
+<ChunkEntry offset="175714"/>
+<ChunkEntry offset="188846"/>
+<ChunkEntry offset="204141"/>
+<ChunkEntry offset="219140"/>
+<ChunkEntry offset="235853"/>
+<ChunkEntry offset="255153"/>
+<ChunkEntry offset="270745"/>
+<ChunkEntry offset="276839"/>
+<ChunkEntry offset="286150"/>
+<ChunkEntry offset="292888"/>
+<ChunkEntry offset="299626"/>
+<ChunkEntry offset="304999"/>
+<ChunkEntry offset="309374"/>
+<ChunkEntry offset="315500"/>
+<ChunkEntry offset="321292"/>
+<ChunkEntry offset="329670"/>
+<ChunkEntry offset="349020"/>
+<ChunkEntry offset="357564"/>
+<ChunkEntry offset="364185"/>
+<ChunkEntry offset="372249"/>
+<ChunkEntry offset="377067"/>
+<ChunkEntry offset="379719"/>
+</ChunkOffsetBox>
+</SampleTableBox>
+</MediaInformationBox>
+</MediaBox>
+<UserDataBox>
+<BoxInfo Size="22" Type="udta"/>
+<UDTARecord Type="name">
+<NameBox Name="Stereo">
+<BoxInfo Size="14" Type="name"/>
+</NameBox>
+</UDTARecord>
+</UserDataBox>
+</TrackBox>
+<UserDataBox>
+<BoxInfo Size="111" Type="udta"/>
+<UDTARecord Type="meta">
+<MetaBox>
+<BoxInfo Size="103" Type="meta"/>
+<FullBoxInfo Version="0" Flags="0"/>
+<HandlerBox Type="mdir" Name="" reserved1="0" reserved2="data:application/octet-string,%00%00%00%00%00%00%00%00%00%00%00%00">
+<BoxInfo Size="33" Type="hdlr"/>
+<FullBoxInfo Version="0" Flags="0"/>
+</HandlerBox>
+<ItemListBox>
+<BoxInfo Size="58" Type="ilst"/>
+<ToolBox value="HandBrake 0.9.4 2009112300" >
+<FullBoxInfo Version="0" Flags="1"/>
+<BoxInfo Size="50" Type=".too"/>
+</ToolBox>
+</ItemListBox>
+</MetaBox>
+</UDTARecord>
+</UserDataBox>
+</MovieBox>
+<FreeSpaceBox size="124">
+<BoxInfo Size="132" Type="free"/>
+</FreeSpaceBox>
+</IsoMediaFile>
